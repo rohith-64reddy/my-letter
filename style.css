@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 0.75rem;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.envelope-checkbox {
+  display: none;
+}
+
+.envelope {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.envelope:active {
+  transform: scale(0.98);
+}
+
+.envelope-icon {
+  color: #ec4899;
+  transition: transform 0.3s ease;
+}
+
+.envelope-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.click-text {
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.floating-heart {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.letter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 0.75rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.letter-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  -webkit-overflow-scrolling: touch;
+}
+
+.envelope-checkbox:checked ~ .letter {
+  opacity: 1;
+  visibility: visible;
+}
+
+.envelope-checkbox:checked ~ .letter .letter-content {
+  transform: translateY(0);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.letter-text {
+  color: #374151;
+  line-height: 1.7;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.letter-text p {
+  margin-bottom: 1rem;
+}
+
+.letter-text .special {
+  padding-top: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.letter-text .signature {
+  padding-top: 1rem;
+  font-style: italic;
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ec4899;
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  width: 100%;
+  border-top: 1px solid #f3f4f6;
+}
+
+.close-button:active {
+  color: #db2777;
+}
+
+/* Custom scrollbar for iOS momentum scroll */
+.letter-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.letter-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.letter-content::-webkit-scrollbar-thumb {
+  background: #ec4899;
+  border-radius: 4px;
+}
+
+.letter-content::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
+
+/* Prevent text selection */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

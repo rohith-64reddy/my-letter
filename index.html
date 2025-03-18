@@ -1,13 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#fce7f3" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Birthday Letter for My Love</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ec4899'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="envelope" class="envelope-checkbox">
+    <label for="envelope" class="envelope">
+      <div class="envelope-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </div>
+      <p class="click-text">Tap to open your birthday letter ❤️</p>
+      <div class="floating-heart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+        </svg>
+      </div>
+    </label>
+
+    <div class="letter">
+      <div class="letter-content">
+        <h1>Happy Birthday, My Love! 🎂</h1>
+        
+        <div class="letter-text">
+          <p>Dearest [Your Girlfriend's Name],</p>
+          
+          <p>On this special day, I want to take a moment to tell you just how much you mean to me. Your presence in my life has made everything brighter, more meaningful, and filled with joy.</p>
+          
+          <p>Your smile lights up my world, your laughter is my favorite melody, and your love makes every day feel like a gift. You're not just my girlfriend; you're my best friend, my confidante, and my greatest blessing.</p>
+          
+          <p>As you celebrate another year of your beautiful life, I want you to know that I cherish every moment we spend together. Your kindness, strength, and the way you care for others inspire me every single day.</p>
+          
+          <p>I promise to continue making memories with you, supporting your dreams, and loving you more with each passing day. You deserve all the happiness in the world, and I feel incredibly lucky to be the one who gets to share these precious moments with you.</p>
+          
+          <p class="special">Happy Birthday, my love! Here's to many more years of love, laughter, and adventures together.</p>
+          
+          <p class="signature">With all my love,</p>
+          <p>[Your Name]</p>
+        </div>
+
+        <label for="envelope" class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          Close Letter
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
