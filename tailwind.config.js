@@ -2,14 +2,7 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      fontFamily: {
-        handwriting: ['cursive'],
-      },
-      screens: {
-        'xs': '375px',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
